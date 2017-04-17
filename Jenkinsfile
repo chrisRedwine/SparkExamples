@@ -3,7 +3,7 @@
 node ('hdp.sandbox') {
     stage('SCM Checkout') {
         checkout([$class: 'GitSCM',
-                  branches: [[name: "env.BRANCH_NAME"]],
+                  branches: [[name: "${env.BRANCH_NAME}"]],
                   browser: [$class: 'Stash', repoUrl: 'https://github.com/chrisRedwine/SparkExamples'],
                   doGenerateSubmoduleConfigurations: false,
                   extensions: [[$class: 'CleanBeforeCheckout']],
