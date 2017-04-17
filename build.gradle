@@ -32,3 +32,10 @@ dependencies {
             "junit:junit:$jUnitVersion"
     )
 }
+
+
+test {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+}
